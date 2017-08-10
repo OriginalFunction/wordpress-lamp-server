@@ -1,5 +1,5 @@
 <VirtualHost *:80>
-        ServerName saigon.dev
+        ServerName localhost
         ServerAdmin webmaster@localhost
 
         DocumentRoot /var/www/html
