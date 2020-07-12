@@ -1,10 +1,10 @@
-FROM ubuntu:xenial
+FROM ubuntu:bionic
 MAINTAINER Ray Hwang <ray.hwang@originalfunction.com>
 
 # Install packages
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && \
-  apt-get -y install supervisor git apache2 curl mysql-server php libapache2-mod-php php-mcrypt php-mysql php-curl php-gd && \
+  apt-get -y install libaio1 libaio-dev supervisor git apache2 curl mysql-server php libapache2-mod-php php-mbstring php-mysql php-curl php-gd && \
   echo "ServerName localhost" >> /etc/apache2/apache2.conf
 
 # Add image configuration and scripts
